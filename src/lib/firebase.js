@@ -1,10 +1,19 @@
-import Firebase from 'firebase/app';
-import 'firebase/firestore';
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 import 'firebase/auth';
 
 
-const config={};
-const firebase = Firebase.initializeApp(config);
-const { FieldValue } = Firebase.firestore;
+const config={
+  apiKey: "AIzaSyCezgCjGmggZbRgIJ41m7wZBeX86Iq_YK8",
+  authDomain: "insta-clone-e8a1b.firebaseapp.com",
+  projectId: "insta-clone-e8a1b",
+  storageBucket: "insta-clone-e8a1b.appspot.com",
+  messagingSenderId: "12960432365",
+  appId: "1:12960432365:web:412c8da0d8827ca2f78ce4"
+};
 
-export { firebase, FieldValue };
+const app = initializeApp(config);
+const  FieldValue  =getFirestore();
+
+
+export { app, FieldValue };
